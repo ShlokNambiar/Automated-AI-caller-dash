@@ -1,0 +1,16 @@
+[Unit]
+Description=Vocacity Observer - Call Trigger
+After=network.target
+
+[Service]
+Type=simple
+User=ssn
+WorkingDirectory=/home/ssn/Vs HQ/Automated-AI-caller-dash/backend
+Environment="PATH=/home/ssn/Vs HQ/Automated-AI-caller-dash/backend/venv/bin"
+ExecStart=/home/ssn/Vs HQ/Automated-AI-caller-dash/backend/venv/bin/python observer.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
